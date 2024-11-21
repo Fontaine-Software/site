@@ -22,7 +22,7 @@ export function links() {
 }
 
 export const clientLoader = async ({ request }) => {
-  return request.url.split('fontaine/')[1]
+  return request.url.split('site/')[1]
 }
 
 export function Layout({ children }) {

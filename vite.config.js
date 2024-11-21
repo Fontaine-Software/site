@@ -2,11 +2,11 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/fontaine/',
+  base: '/site/',
   plugins: [
     remix({
       ssr: false,
-      basename: '/fontaine/',
+      basename: '/site/',
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,

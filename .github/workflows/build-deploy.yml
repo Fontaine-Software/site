@@ -52,6 +52,6 @@ jobs:
       - name: 🗑 Delete deployment
         uses: strumwolf/delete-deployment-environment@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           environment: github-pages
           onlyRemoveDeployments: true

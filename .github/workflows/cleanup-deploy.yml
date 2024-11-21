@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Delete Deployment Environment
 
 on:
   # Runs on pushes targeting the default branch
@@ -22,26 +22,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install & Build
-        run: |
-          npm ci
-          npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: 'build/client'
-      - name: Deploy to GitHub Pages 
-        id: deployment
-        uses: actions/deploy-pages@v4
+        - name: Delete Deployment Environment
+          uses: strumwolf/delete-deployment-environment@v3.0.0
+          with:
+            token: ${{ secrets.GH_TOKEN }}
+            environment: github-pages
+            onlyRemoveDeployments: true

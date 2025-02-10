@@ -1,0 +1,33 @@
+.accord-head {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.15s, 0s border;
+    &:hover {
+        background-color: var(--surface-secondary);
+    }
+
+    &.Accord-thick {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+// ======= Divider =======
+
+.accord-divider {
+    border-bottom: 1px solid var(--surface-border);
+}
+
+// ======= Child =======
+
+.child-divider {
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.child-has-head-divider {
+    border-top: 1px solid var(--surface-border);
+}
+
+.child-has-bottom-divider {
+    border-bottom: 1px solid var(--surface-border);
+}

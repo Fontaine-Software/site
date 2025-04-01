@@ -3,18 +3,17 @@ import type { ReactNode } from "react";
 // IF THIS GETS TO LONG. ADD A BOTTOM TAG AT CHANGE LOG, SEE THE REST [HERE]
 // NOTE: Don't repeat its label at the beginning. Fixed : Fixed this issue...
 
-export const latestChangelogVersion = "1.9.0" // NOTE : Update this value to the latest
+export const latestChangelogVersion = "1.9.8" // NOTE : Update this value to the latest
 
 export const upcoming = {
-    date: "February 10th 2025", // Acts as a last updated
-    new: [
-        "Webhook product updating (automatically create SKUs/Barcodes when a new product is added to your store)",
-        "Efficent product selector for large stores",
-        "Additional conditional options (Inventory location, created at, feel free to suggest more!)",
-        "Collection selector",
-        "Translations",
-        "Mobile support",
-    ],
+  date: "April 1st 2025", // Acts as a last updated
+  new: [
+    "Webhook product updating (automatically create SKUs/Barcodes when a new product is added to your store)",
+    "Additional conditional options (Inventory location, created at, feel free to suggest more!)",
+    "Collection selector",
+    "Translations",
+    "Mobile support",
+  ],
 }
 
 /** Force show the upcoming. Only shows when change log forces shows up */
@@ -40,6 +39,24 @@ export type ChangelogEntry = {
 type RenderText = string | number | ReactNode | JSX.Element;
 
 export const changelog: ChangelogEntry[] = [
+  {
+    version: '1.9.8',
+    date: 'April 1st 2025',
+    new: [
+      'Support for upcoming increase of variants per product limit'
+    ],
+    improved: [
+      'Product selector performance for large inventory stores',
+      'Feature general performance',
+      'Minor UI improvements / changes'
+    ],
+    fixed: [
+      'Minor issues',
+    ],
+    note: [
+      "If you had any presets, unfortunately, they've been removed. This is to accommodate upcoming changes coming to presets in the next update. I apologize for the inconvenience.",
+    ]
+  },
     {
         version: "1.9.0",
         date: "February 10th 2025",

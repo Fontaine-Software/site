@@ -3,12 +3,11 @@ import type { ReactNode } from "react";
 // IF THIS GETS TO LONG. ADD A BOTTOM TAG AT CHANGE LOG, SEE THE REST [HERE]
 // NOTE: Don't repeat its label at the beginning. Fixed : Fixed this issue...
 
-export const latestChangelogVersion = "1.9.8" // NOTE : Update this value to the latest
+export const latestChangelogVersion = "2.0.0" // NOTE : Update this value to the latest
 
 export const upcoming = {
-  date: "April 1st 2025", // Acts as a last updated
+  date: "June 2nd 2025", // Acts as a last updated
   new: [
-    "Webhook product updating (automatically create SKUs/Barcodes when a new product is added to your store)",
     "Additional conditional options (Inventory location, created at, feel free to suggest more!)",
     "Collection selector",
     "Translations",
@@ -39,6 +38,23 @@ export type ChangelogEntry = {
 type RenderText = string | number | ReactNode | JSX.Element;
 
 export const changelog: ChangelogEntry[] = [
+  {
+    version: '2.0.0',
+    date: 'June 2nd 2025',
+    new: [
+      "Automatic SKU/Barcode generation when a new variant is created.",
+    ]
+  },
+  {
+    version: '1.9.9',
+    date: 'May 6th 2025',
+    improved: [
+      'Minor UI improvements / changes'
+    ],
+    fixed: [
+      'Minor issues',
+    ],
+  },
   {
     version: '1.9.8',
     date: 'April 1st 2025',
